@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berdia portfoilo</title>
+
+    <link rel="website icon" type="png"
+    href="imgs/website icon.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <header>
+            <center>
+                <h1>Berdia bekauri</h1>
+                <p>programmer, web developer, editor & designer</p>
+                <br>
+                <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">click here to see the time</button>
+                <p id="demo"></p>
+            </center>
+        </header>
+    </div>
+    <br>
+    <div class="javascript">
+        <h1 id="javascript">Javascript things i made for you</h1>
+        <h2 id="changing-paragraph">Changing paragraph</h2>
+        <p id="paragraph">Hello guys</p>
+        <button type="button" onclick="document.getElementById('paragraph').innerHTML = 'i want you to join goa oriented academy'">click on me to change the paragraph</button>
+        <br>
+        <h1 id="javascript-h1">Lighting bulb</h1>
+        <br>
+        <button type="button" onclick="document.getElementById('bulb').src='pic_bulbon.gif'">Turn on</button>
+        <br>
+        <center><img id="bulb" src="pic_bulboff.gif" alt="bulb"></center>
+        <br>
+        <button type="button" onclick="documet.getElementById('bulb').src='pic_bulboff.gif'">Turn off</button>
+    </div>
+    <div class="main" id="about">
+        <main>
+            <h1 class="h1">About me</h1>
+            <center><img src="imgs/me.png" alt="this is me" width="400"></center>
+            <p>my name is berdia</p>
+            <p>i am 11 years old</p>
+            <p>i am from georgia</p>
+            <p>i study at goa oriented academy</p>
+            <p>i love programming, editing, developing & designing</p>
+            <p>these are my programming langueges</p>
+            <ol>
+                <li>python</li>
+                <li>html</li>
+                <li>css</li>
+                <li>javascript</li>
+            </ol>
+            <p>these are the country langueges i can speak</p>
+            <ul>
+                <li>georgian</li>
+                <li>russian</li>
+                <li>english</li>
+                <li>italian</li>
+            </ul>
+        </main>
+    </div>
+    <br>
+    <div class="main" id="contact">
+        <main>
+            <h1 class="h1">Contact us</h1>
+            <h2 id="h2">Got some problems to solve?</h2>
+            <form>
+                <p>name</p>
+                <input type="text" name="name" placeholder="enter your name" required>
+                <p>email</p>
+                <input type="email" name="email" placeholder="enter your email" required>
+                <p>password</p>
+                <input type="password" name="password" placeholder="enter your password" required>
+                <p>messege</p>
+                <input type="text" name="messege" placeholder="enter your messege" required>
+                <br>
+                <button type="submit">Enter</button>
+            </form>
+        </main>
+    </div>
+    <br>
+    <div class="footer" id="the end">
+        <footer>
+            <p id="p">©2024 Berdia</p>
+        </footer>
+    </div>
+</body>
+</html>
