@@ -12,7 +12,7 @@ body{
 header{
     color: white;
     text-align: center;
-    }
+}
 .javascript{
     background-color: white;
     text-align: center;
@@ -37,4 +37,19 @@ footer{
 
 #bulb{
     width: 100px;
+}
+
+button {
+    background-color: #303030;
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+button:active {
+    background-color: black;
+    color: white;
 }
