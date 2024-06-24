@@ -16,7 +16,12 @@ header{
 .javascript{
     background-color: white;
     text-align: center;
-} 
+}
+
+ul {
+    list-style-type: square;
+}
+
 #about{
     text-align: center;
 }
@@ -42,14 +47,47 @@ footer{
 button {
     background-color: #303030;
     color: white;
+
+    border: 10px solid #303030;
+    border-radius: 40px;
 }
 
 button:hover {
     background-color: white;
     color: black;
+
+    transition: 0.25s;
 }
 
 button:active {
     background-color: black;
     color: white;
+    
+    transition: 0.25s;
+}
+
+.button {
+    background-color: white;
+    color: black;
+
+    border: 10px solid black;
+    border-radius: 40px;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: white;
+
+    border: solid white;
+
+    transition: 0.25s;
+}
+
+.button:active {
+    background-color: white;
+    color: black;
+
+    border: solid black;
+
+    transition: 0.25s;
 }
