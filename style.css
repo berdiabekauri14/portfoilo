@@ -48,13 +48,17 @@ button {
     background-color: #303030;
     color: white;
 
-    border: 10px solid #303030;
+    border: 2px solid #303030;
     border-radius: 40px;
+
+    transition: 0.25s;
 }
 
 button:hover {
-    background-color: white;
+    background-color: transparent;
     color: black;
+
+    border: solid black;
 
     transition: 0.25s;
 }
@@ -62,16 +66,69 @@ button:hover {
 button:active {
     background-color: black;
     color: white;
+
+    border: solid white;
     
     transition: 0.25s;
+}
+
+#img {
+    border-radius: 40px;
+    box-shadow: 0px 0px 53px 7px black;
+}
+
+.img {
+    border-radius: 70px;
+}
+
+#Enter {
+    width: 100%;
+    padding: 20px 10px;
+    border-radius: 17px;
+    background-color: rgb(41, 98, 255);
+    border: 1px solid rgb(41, 98, 255);
+    color: aliceblue;
+    box-shadow: 0 0 25px gray;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+#Enter:hover {
+    background-color: transparent;
+    color: rgb(41, 98, 255);
+
+    transition: 0.25s;
+}
+
+#Enter:active {
+    background-color: rgb(41, 98, 255);
+    color: aliceblue;
+
+    transition: 0.25s;
+}
+
+input #Enter {
+    font-size: 18px;
+}
+
+input {
+    width: 100%;
+    padding: 20px 10px;
+    border: none;
+    border-radius: 17px;
+    outline: none;
+    text-align: center;
+    background-color: rgb(240, 240, 240);
 }
 
 .button {
     background-color: white;
     color: black;
 
-    border: 10px solid black;
+    border: 2px solid black;
     border-radius: 40px;
+
+    transition: 0.25s;
 }
 
 .button:hover {
