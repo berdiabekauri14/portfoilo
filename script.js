@@ -1,25 +1,30 @@
 const form = document.getElementById("form");
 const btn = document.getElementById("Enter");
+const dataBase = [];
 
 function validateForm() {
-  let name = form.elements.name.value;
-  let email = form.elements.email.value;
-  let password = form.elements.password.value;
-  let message = form.elements.message.value
+  const name = form.elements.name.value;
+  const email = form.elements.email.value;
+  const password = form.elements.password.value;
+  const message = form.elements.message.value
 
-  if (name == "" || email == "" || password == "" || message == "") {
-    alert("Incorrect, You must Enter in all fields");
+  if (name === "" || email === "" || password === "" || message === "") {
+    alert("Incorrect, Please Enter in all fields");
     return;
   }
 
   alert("Message sent");
-  console.log(`Name: ${name}`);
-  console.log(`Email: ${email}`);
-  console.log(`Password: ${password}`);
-  console.log(`Message: ${message}`);
+  console.log("Form was sucssesfully submitted");
+  dataBase.push({
+    Name: name,
+    Email: email,
+    Password: password,
+    Message: message,
+  });
+  console.log(dataBase);
 }
 
-btn.onclick = validateForm;
+btn.onclick = validateForm; 
 
 let myInput = document.getElementById("password");
 let letter = document.getElementById("lower-letter");
@@ -72,11 +77,17 @@ myInput.onkeyup = function() {
   }
 }
 
-let background = document.getElementById("parent");
-let secondBackground = document.getElementById("work");
-let thirdBackground = document.getElementById("pages");
-let anchor = document.querySelector(".a-anchor");
-let load = document.querySelector(".loader");
+const background = document.getElementById("parent");
+const secondBackground = document.getElementById("work");
+const thirdBackground = document.getElementById("pages");
+const anchor = document.getElementById(".a-anchor");
+const toggle = document.getElementById("toggle");
+const inputs = {
+  1: document.getElementById("name"),
+  2: document.getElementById("email"),
+  3: document.getElementById("password"),
+  4: document.getElementById("message")
+};
 
 function darkMode() {
   background.style.backgroundColor = "rgb(29, 29, 29)";
@@ -84,6 +95,8 @@ function darkMode() {
   secondBackground.style.backgroundColor = "black";
   thirdBackground.style.backgroundColor = "rgb(29, 29, 29)";
   anchor.style.color = "white";
-  load.style.borderColor = "white";
-  load.style.borderTopColor = "aqua";
+  inputs.style.backgroundColor = "rgb(29, 29, 29)";
+  inputs.style.color = "white"
 }
+
+toggle.onclick = darkMode;

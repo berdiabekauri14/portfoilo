@@ -22,7 +22,7 @@ p, li {
 }
 
 header, footer {
-    background-color: blue;
+    background: linear-gradient(to right, purple, blue);
     color: white;
     padding: 10px 0;
 }
@@ -196,15 +196,16 @@ a:active {
 }
 
 input {
-    background-color: white;
-    color: black;
+    background-color: rgb(238, 238, 238);
     border: none;
+    outline: none;
     border-radius: 5px;
     width: 300px;
-    height: 60px;
-    font-size: x-large;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.336);
+    height: 35px;
+    text-transform: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.473);
     transition: 0.24s;
+    text-align: left;
 }
 
 .paragraph {
@@ -235,6 +236,7 @@ input {
 #Enter:active {
     background-color: white;
     color: black;
+    text-shadow: none;
 }
 
 #work {
@@ -307,7 +309,7 @@ input {
 #contact {
     background-color: brown;
     padding: 10px 0;
-    width: 1300px;
+    width: 1350px;
     height: 750px;
     color: white;
 }
@@ -342,8 +344,8 @@ input {
 
 #contact-h1 {
     position: relative;
-    bottom: 100px;
-    left: 50px;
+    bottom: 65px;
+    left: 40px;
     text-shadow: 0px 0px 20px white,
                 0px 0px 20px black;
 }
@@ -352,13 +354,7 @@ input {
     text-shadow: 0px 0px 20px white,
                 0px 0px 20px black;
     position: relative;
-    right: 93px;
-}
-
-#span {
-    color: red;
-    text-shadow: 0px 0px 20px red,
-                0px 0px 20px black;
+    right: 99px;
 }
 
 form {
@@ -431,8 +427,8 @@ form {
     }
 }
 
-.message {
-    height: 100px;
+* {
+    text-transform: capitalize;
 }
 
 #my-img {
@@ -500,24 +496,100 @@ html {
     width: 300px;
     background-color: transparent;
     color: white;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 20px white,
+                0px 0px 20px black;
 }
 
 #button2:active {
     background-color: white;
     color: blue;
+    letter-spacing: 5px;
+    text-shadow: none;
 }
 
 #heading {
     opacity: 100;
-    position: fixed;;
+    position: fixed;
     transform: translateX(-50px) translateY(-10px);
     text-align: center;
-    background-color: blue;
     color: white;
+    background: linear-gradient(to right, purple, blue);
     padding: 10px 0;
     width: 1500px;
     height: 100px;
     z-index: 10;
+}
+
+@media (max-width: 700px) {
+    #heading {
+        width: 900px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 500px) {
+    label {
+        width: 90px;
+    }
+
+    #texts {
+        opacity: 0;
+        display: none;
+    }
+
+    #menu {
+        background-color: white;
+        width: 100px;
+        height: 19px;
+        position: relative;
+        left: 353px;
+        bottom: 120px;
+        cursor: pointer;
+    }
+
+    #menu::before {
+        content: "MENUUUUUu";
+        background-color: white;
+        width: 120px;
+        height: 20px;
+        position: relative;
+        top: 25px;
+    }
+
+    #menu::after {
+        content: "MENUUUUUu";
+        background-color: white;
+        width: 100px;
+        height: 19px;
+        position: relative;
+        bottom: 145px;
+    }
+
+    .anchor {
+        position: relative;
+        top: 40px;
+        display: grid;
+        grid-template-rows: 1fr 3px 1px 1px;
+        row-gap: 1px;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .anchor:not(:hover) {
+        opacity: 0;
+    }
+
+    .anchor:hover {
+        color: black;
+        opacity: 100;
+        visibility: visible;
+    }
+
+    #heading1 {
+        opacity: 0;
+    }
 }
 
 .valid {
@@ -584,10 +656,34 @@ label {
                 inset 0px 0px 15px 20px rgba(0, 0, 0, 0.24),
                 0px 0px 20px rgba(0, 0, 0, 0.377);
     cursor: pointer;
+    transition: 0.24s;
+    animation: label-animate 1s;
+}
+
+@media (max-width: 700px) {
+    label {
+        width: 275px;
+        transform: translateX(-45px);
+    }
+
+    #heading1 {
+        transform: translateY(50px);
+        animation: heading-animate;
+    }
+
+    @keyframes heading-animate {
+        from {transform: translateY(-600px)}
+        to {transform: translateY(1px)}
+    }
+}
+
+@keyframes label-animate {
+    from {transform: translateX(-600px);}
+    to {transform: translateX(1px)}
 }
 
 label::after {
-    content: '';
+    content: "";
     width: 50px;
     height: 50px;
     position: absolute;
@@ -595,8 +691,11 @@ label::after {
     left: 10px;
     background: linear-gradient(180deg, orange, orangered);
     border-radius: 180px;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.267);
     transition: 0.24s;
+}
+
+label:active:after {
+    width: 90px;
 }
 
 #darkmode-toggle {
@@ -620,8 +719,9 @@ label::after {
     transition: 0.24s;
 }
 
-#darkmode-toggle:active::after {
-    width: 50px;
+#darkmode-toogle:checked + label:active:after {
+    position: relative;
+    right: 5px;
 }
 
 #heading1 {
@@ -686,17 +786,6 @@ label::after {
     opacity: 100;
     position: relative;
     bottom: 20px;
-}
-
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #accounts {
