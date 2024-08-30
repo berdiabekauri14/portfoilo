@@ -96,7 +96,7 @@ function darkMode() {
   thirdBackground.style.backgroundColor = "rgb(29, 29, 29)";
   anchor.style.color = "white";
   inputs.style.backgroundColor = "rgb(29, 29, 29)";
-  inputs.style.color = "white"
+  inputs.style.color = "white";
 }
 
 toggle.onclick = darkMode;
